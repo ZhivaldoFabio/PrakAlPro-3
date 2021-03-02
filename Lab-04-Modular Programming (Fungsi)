@@ -1,0 +1,71 @@
+# Lab - 04 - Modular Programming (fungsi)
+# Zhivaldo Fabio H.
+# 71200608
+
+'''
+Permainan Adventure menggunakan def (fungsi)
+'''
+# Input : Variable jawaban, ya dan tidak
+
+# Process : Mencari mana yang di input. dan lanjut masuk ke fungsi selanjutnya atau percabangan selanjutnya.
+
+# Output : Cerita..
+
+'''
+This is an example of using fungction (def)
+'''
+
+import time
+
+required = ("\nUse only A, B, or C\n")
+answer_A = ["A", "a"]
+answer_B = ["B", "b"]
+answer_C = ["C", "c"]
+yes = ["Y", "y", "yes", "YES"]
+no = ["N", "n", "no"]
+
+print ("Hello Adventurer! How am i Supposed to call u?")
+print ()
+p1 = input (">>> ")
+print ()
+
+def greet():
+    print ("Well Hello",p1 + "! Welcome to the world of Miserable!")
+    print ("I'm here to inform you that there is a HUGE MONSTER")
+    print ("in the Purr Cave")
+    print ("This Monster that people called PUSSAY")
+    print ("are taking lives from people in the village..")
+    print ()
+
+    time.sleep(5)
+    print ("A. Yea? What am I supposed to do with that?")
+    print ("B. Really? Haha.. Funny.")
+
+    choice = input (">>> ")
+    print ()
+    
+    if choice in answer_A:
+        option_serious()
+    elif choice in answer_B:
+        option_joke()
+    else:
+        print (required)
+        greet ()
+
+def option_serious():
+    print ("blablabla")
+    time.sleep(1)
+    print ("A. choice a")
+    print ("B. coice b")
+
+    choice = input (">>> ")
+    print ()
+
+    if choice in answer_A:
+        exit()
+    else:
+        print ("hah lol")
+        time.sleep(2)
+        exit()
+
+greet()
